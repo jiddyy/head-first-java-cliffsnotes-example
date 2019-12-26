@@ -75,6 +75,25 @@ and `HttpServletResponse` object. For example, form data from the request is ava
 
 ## What are EJBs?
 
+The book doesn't much description or any sample code about Enterprise Java Beans (EJBs).
+The book summarizes them as RMI an steroids. It offers the idea that real world situations
+have a lot of complicated problems that RMI doesn't address by default: transactions,
+database management, security, etc. EJBs are supposed to be an RMI-esque tool that helps
+developers address these additional, real world concerns.
+
 ## What is Jini?
 
-## Why do I care about all of this?
+Similar to EJBs, Jini isn't covered very much by the book. The book compares EJBs and Jini
+
+> If EJB is RMI on steroids [...], Jini is RMI with wings.
+
+The book describes two features Jini provides on top of RMI: adaptive discovery,
+and self-healing networks.
+
+Adaptive discovery allows clients to discover a service according to a desired `interface`
+instead of by name. For instance, you could use Jini to lookup a `GuestbookServer` instead
+of looking up a server by its name.
+
+Self-healing networks involves registered services maintaining a "lease" with the Jini
+lookup service. This allows the Jini lookup service to keep a dynamic understanding of
+what services are available for which interfaces.
