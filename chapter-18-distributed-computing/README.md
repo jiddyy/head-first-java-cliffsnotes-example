@@ -47,6 +47,32 @@ etc to support programming against RMI based services.
 
 ## What are Servlets?
 
+Servlets are Java programs that run inside an HTTP web server. They might feel like a tiny version of a Django application.
+
+To write a Servlet, you implement a class that extends a servlet base class (probably `HttpServlet`).
+On this class, you override methods to setup your servlet.
+For `HttpServlet` these methods will be related to how your servlet should handle HTTP requests like (`doGet`/`doPost`).
+
+```java
+public class MyServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
+            PrintWriter out = response.getWriter();
+            response.setContentType("text/html");
+            out.write("Hello!");
+            out.close();
+        }
+}
+```
+
+Running these servlets will involve setting up some sort of servlet container (e.g. Tomcat) and
+placing your compiled servlets and some configuration in the correct directories for the container
+to find and execute. In other words, it is not quite as simple as `./manage.py runserver`.
+
+Interactions with requests/responses are exposed through methods on the `HttpServletRequest` object
+and `HttpServletResponse` object. For example, form data from the request is available through the
+`request.getParameter(name)` method.
+
 ## What are EJBs?
 
 ## What is Jini?
