@@ -11,30 +11,36 @@
 
 Example:
 
+``` java
 public class Dog {
 
 }
+```
 
 - A class has one or more methods. In the Dog Class, the bark method will hold instructions for how the Dog should bark. Your methods must be declared INSIDE a class.
 
 Example:
 
+``` java
 public class Dog {
     void bark() {
 
     }
 }
+```
 
 - Within the curly braces of a method, write your instructions for how that method should be performed. Method code is basically a set of statements, and for now you can think of a method kind of like a function or procedure.
 
 Example:
 
+``` java
 public class Dog {
     void bark() {
         statement1;
         statement2;
     }
 }
+```
 
 # Writing a class with a main
 
