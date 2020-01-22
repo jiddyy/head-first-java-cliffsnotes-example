@@ -73,7 +73,7 @@ void takeTwo(int x, int y) {
 
 * You can pass variables into a method, as long as the variable type matches the parameter type.
 
-# How to objects in an array behave?
+# How do objects in an array behave?
 
 - Just like any other object, the only difference is how you get to them. In other words, how you get the remote control. Let's try calling methods on Dog objects in an array.
 
